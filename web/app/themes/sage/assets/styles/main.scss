@@ -1,3 +1,7 @@
+@import "typography/lato_font";
+@import "typography/libre_baskerville_font";
+@import "typography/oswald_font";
+@import "typography/fontawesome/font-awesome";
 @import "common/variables";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
@@ -6,6 +10,7 @@
 // endbower
 
 @import "common/global";
+@import "components/navigation";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";

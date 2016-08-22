@@ -1,9 +1,14 @@
+@import "colors";
+@import "mixins-master";
+
 // Glyphicons font path
 $icon-font-path:        "../fonts/";
 
 // Grid settings
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
+
+$height-site-header:	90px;
 
 // Colors
 $brand-primary:         #27ae60;
