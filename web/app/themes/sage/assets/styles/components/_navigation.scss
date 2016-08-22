@@ -71,6 +71,20 @@
 	.current-menu-ancestor > a {
 	}
 }
+.nav > li > a {
+	font-family: $font-sans-medium;
+	color: $white;
+	text-transform: uppercase;
+	background: transparent;
+	&:hover {
+		background: inherit;
+	}
+	&:active,
+	&:focus,
+	&.active {
+		background: inherit;
+	}
+}
 #nav-toggle {
 	display: block;
 	position: absolute;
