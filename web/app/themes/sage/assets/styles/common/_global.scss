@@ -11,24 +11,6 @@ body {
     padding-top: $height-site-header;
 }
 
-body.home.page {
-background-color: #333;
-background: url(../images/home_bg.jpg) no-repeat center;
-background-size: cover;
-}
-
-.page-overlay-wrap {
-	display: block;
-	position: fixed;
-	width: 100%;
-	margin: 0;
-	top: $height-site-header;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0,0,0,.6);
-	z-index: 2;
-}
 .container,
 .wrap.container {
 	clear: both;
