@@ -10,6 +10,11 @@ header.banner {
 	padding: 14px 0;
     background: $color-site-header-bg;
     color: $white;
+    z-index: 1;
+    .logged-in &,
+    .menu-bar & {
+    	top: 32px;
+    }
     div.title-area {
         @extend .col-md-4;
         h1 {
@@ -48,5 +53,6 @@ header.banner {
     }
     .header-nav {
         @extend .col-md-8;
+        padding-top: 10px;
     }
 }

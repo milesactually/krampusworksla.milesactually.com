@@ -9,6 +9,10 @@ body {
     font-weight: $font-weight-base;
     font-size: $font-size-base;
     padding-top: $height-site-header;
+    &.logged-in,
+    &.menu-bar {
+    	padding-top: calc(#{$height-site-header} + 32px);
+    }
 }
 
 .container,
@@ -21,7 +25,7 @@ body {
 	clear: both;
 }
 
-.main {
+.wrap.container {
 	padding-top: 60px;
 	padding-bottom: 60px;
 }

@@ -73,6 +73,33 @@ function widgets_init() {
     'after_title'   => '</h3>'
   ]);
 
+    register_sidebar([
+    'name'          => __('Home Page Widget Area 2', 'sage'),
+    'id'            => 'sidebar-home-2',
+    'before_widget' => '<section><div class="widget %1$s %2$s">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+    register_sidebar([
+    'name'          => __('Home Page Widget Area 3', 'sage'),
+    'id'            => 'sidebar-home-3',
+    'before_widget' => '<section><div class="widget %1$s %2$s">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+    register_sidebar([
+    'name'          => __('Home Page Widget Area 4', 'sage'),
+    'id'            => 'sidebar-home-4',
+    'before_widget' => '<section><div class="widget %1$s %2$s">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
   register_sidebar([
     'name'          => __('Site Footer', 'sage'),
     'id'            => 'sidebar-footer',

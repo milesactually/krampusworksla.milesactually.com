@@ -59,16 +59,29 @@
 		display: block;
 		text-decoration: none;
 		padding: 0 15px;
+		border-bottom: 1px solid transparent;
+		@include transition(all, 0.4s, ease-in-out);
+		&:hover  {
+			color: $color-cta-hover;
+			border-color: $color-red-3;
+		}
+		&:active,
+		&:focus {
+			color: $color-cta-active;
+			border-color: $white;
+		}
 	}
 	li:last-child > a {
 		margin-right: -15px;
 
 	}
-
+	li.active > a,
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		color: $color-gray-1;
+		border-color: $white;
 	}
 }
 .nav > li > a {
