@@ -1,4 +1,5 @@
 footer.content-info {
+	@extend %block-default-full-width;
 	background: $color-site-footer-bg;
 	color: $white;
 	height: $height-site-footer;

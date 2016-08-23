@@ -9,6 +9,7 @@ $font-size-h5:            	ceil(($font-size-base * 1)) !default;
 $font-size-h6:            	ceil(($font-size-base * 0.55)) !default;
 $font-sans: 				"LatoWebLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
 $font-serif: 				"libre_baskervilleregular", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif !default;
+$font-serif-bold: 			"libre_baskervillebold", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif !default;
 $font-mono:					Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !default;
 $font-sans-bold:			"LatoWebBold", $font-sans !default;
 $font-sans-black:			"LatoWebBlack", $font-sans !default;

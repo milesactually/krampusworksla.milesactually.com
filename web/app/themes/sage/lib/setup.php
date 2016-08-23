@@ -16,6 +16,7 @@ function setup() {
   add_theme_support('soil-jquery-cdn');
   add_theme_support('soil-relative-urls');
   add_theme_support('woocommerce');
+  //add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/sage-translations
@@ -67,7 +68,7 @@ function widgets_init() {
     register_sidebar([
     'name'          => __('Home Page Widget Area 1', 'sage'),
     'id'            => 'sidebar-home-1',
-    'before_widget' => '<section><div class="widget %1$s %2$s">',
+    'before_widget' => '<section class="home-widget-section"><div class="widget %1$s %2$s">',
     'after_widget'  => '</div></section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
@@ -76,7 +77,7 @@ function widgets_init() {
     register_sidebar([
     'name'          => __('Home Page Widget Area 2', 'sage'),
     'id'            => 'sidebar-home-2',
-    'before_widget' => '<section><div class="widget %1$s %2$s">',
+    'before_widget' => '<section class="home-widget-section"><div class="widget %1$s %2$s">',
     'after_widget'  => '</div></section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
@@ -85,7 +86,7 @@ function widgets_init() {
     register_sidebar([
     'name'          => __('Home Page Widget Area 3', 'sage'),
     'id'            => 'sidebar-home-3',
-    'before_widget' => '<section><div class="widget %1$s %2$s">',
+    'before_widget' => '<section class="home-widget-section"><div class="widget %1$s %2$s">',
     'after_widget'  => '</div></section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
@@ -94,7 +95,7 @@ function widgets_init() {
     register_sidebar([
     'name'          => __('Home Page Widget Area 4', 'sage'),
     'id'            => 'sidebar-home-4',
-    'before_widget' => '<section><div class="widget %1$s %2$s">',
+    'before_widget' => '<section class="home-widget-section"><div class="widget %1$s %2$s">',
     'after_widget'  => '</div></section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'

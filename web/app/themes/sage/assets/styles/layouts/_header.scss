@@ -10,13 +10,18 @@ header.banner {
 	padding: 14px 0;
     background: $color-site-header-bg;
     color: $white;
-    z-index: 1;
+    z-index: 5;
     .logged-in &,
     .menu-bar & {
     	top: 32px;
     }
+   .container {
+    	padding-left: 0;
+    	padding-right: 0;
+    }
     div.title-area {
         @extend .col-md-4;
+        text-align: left;
         h1 {
         	display: inline-block;
         	float: left;
@@ -24,7 +29,7 @@ header.banner {
             font-size: 30px;
             margin: 0;
             text-transform: uppercase;
-            border-bottom: 3px solid $color-red-3;
+            border-bottom: 2px solid $color-red-3;
             a {
             	color: $color-red-2;
                 span {

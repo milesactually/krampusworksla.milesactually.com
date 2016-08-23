@@ -11,21 +11,11 @@ body {
     padding-top: $height-site-header;
     &.logged-in,
     &.menu-bar {
-    	padding-top: calc(#{$height-site-header} + 32px);
+        padding-top: calc(#{$height-site-header} + 32px);
     }
 }
 
-.container,
-.wrap.container {
-	clear: both;
-	height: 100%;
-	@extend %clearfix;
-}
-.row {
-	clear: both;
-}
-
-.wrap.container {
+.main {
 	padding-top: 60px;
 	padding-bottom: 60px;
 }
@@ -45,9 +35,11 @@ h6,
     font-family: $font-headings;
 }
 
-a {
+a,
+a:any-link {
     color: $color-cta;
     text-decoration: none;
+    transition: all .5s ease-in-out;;
     &:hover {
         color: $color-cta-hover;
         text-decoration: none;
@@ -59,10 +51,8 @@ a {
     }
 }
 
-a,
-a:any-link {
-        @include transition(all, 0.6s, ease-in-out);
-    &:hover {
-        @include transition(all, 0.6s, ease-in-out);
-    }
+.btn,
+.button {
+	font-family: $font-sans-medium;
+	text-transform: uppercase;
 }

@@ -1,0 +1,51 @@
+.archive.woocommerce ul.products li.product,
+.archive.woocommerce ul.products li.product.last,
+#product-widget .widget {
+    text-align: center;
+    clear: none;
+    display: inline-block;
+    float: left;
+    width: 31%;
+    margin-right: 3.5%;
+    margin-bottom: 40px;
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
+#product-widget .widget {
+    background: $white-tint;
+    padding: 15px;
+    h3 {
+    	font-family: $font-serif-bold;
+    	color: $color-text-main;
+    }
+    .widget-content a:first-child {
+        @extend %block-default-full-width;
+        background: darken($color-red-3, 12%);
+        @extend %transition-default;
+        &:hover img {
+            transition: all .6s ease-in-out;
+            opacity: .5;
+        }
+    }
+    img {
+        clear: both;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.woocommerce {
+    a .button,
+    button,
+    .button,
+    .button.button,
+    .button.alt,
+    button.button.alt,
+    input.button.alt,
+    a.button {
+        @extend .btn;
+        @extend .btn-primary;
+    }
+}

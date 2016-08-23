@@ -1,26 +1,20 @@
 body.home.page {
-background-color: #333;
-background: url(../images/home_bg.jpg) no-repeat center;
-background-size: cover;
-section {
-	.widget {
-		@extend .container;
-		padding-top: 60px;
-		padding-bottom: 60px;
-		color: $white;
-	}
-}
+    background-color: #000;
+    color: $white;
+    background: url(../images/trio_overlay.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
 }
 
-#home-overlay-wrap {
-	display: block;
-	position: fixed;
-	width: 100%;
-	margin: 0;
-	top: $height-site-header;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0,0,0,.6);
-	z-index: 2;
+.hero {
+	margin-bottom: 60px;
+	h1, h2 {
+		margin: 0;
+		line-height: 1.1;
+	}
+    h1 {
+        font-size: 72px;
+        font-family: $font-sans-black;
+    }
 }
