@@ -1,63 +1,89 @@
 header.banner {
-	display: block;
-	position: fixed;
-	width: 100%;
-	height: $height-site-header;
-	margin: 0;
-	top: 0;
-	left: 0;
-	right: 0;
-	padding: 14px 0;
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: $height-site-header;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 0;
     background: $color-site-header-bg;
     color: $white;
     z-index: 5;
     .logged-in &,
     .menu-bar & {
-    	top: 32px;
+        top: 32px;
     }
-   .container {
-    	padding-left: 0;
-    	padding-right: 0;
+    .container {
+        padding-left: 0;
+        padding-right: 0;
     }
     div.title-area {
-        @extend .col-md-4;
+        @extend .col-md-5;
         text-align: left;
-        h1 {
-        	display: inline-block;
-        	float: left;
-        	width: auto;
+        img {
+            float: left;
+            height: 62px;
+            width: auto;
+            margin-right: 15px;
+            @media screen and (max-width: 414px) {
+            	display: none;
+            }
+        }
+        a h1 {
+            display: inline-block;
+            float: left;
+            width: auto;
             font-size: 30px;
             margin: 0;
             text-transform: uppercase;
             border-bottom: 2px solid $color-red-3;
-            a {
-            	color: $color-red-2;
-                span {
-                    &:first-child {
-                        font-family: $font-sans-black;
-                        color: $white;
-                    }
-                    &:nth-child(2) {
-                        font-family: $font-sans-light;
-                        color: $color-gray-1;
-                    }
-                    &:last-child {
-                        font-family: $font-sans-black;
-                        color: $white;
-                    }
+            color: $color-red-2;
+            span {
+                &:first-child {
+                    font-family: $font-sans-black;
+                    color: $white;
                 }
+                &:nth-child(2) {
+                    font-family: $font-sans-light;
+                    color: $color-gray-1;
+                }
+                &:last-child {
+                    font-family: $font-sans-black;
+                    color: $white;
+                }
+            }
+            @media screen and (max-width: 479px) {
+             span {
+                &:first-child {
+                    font-family: $font-narrow-medium;
+                    color: $white;
+                }
+                &:nth-child(2) {
+                    font-family: $font-narrow-light;
+                    color: $color-gray-1;
+                }
+                &:last-child {
+                    font-family: $font-narrow-medium;
+                    color: $white;
+                }
+            }           	
             }
         }
         p {
-        	clear: both;
-        	font-family: $font-sans-light;
-        	font-size: 18px;
-        	text-transform: uppercase;
-        	margin-bottom: 0;
+            float: left;
+            font-family: $font-sans-light;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            @media screen and (max-width: 479px) {
+            	font-family: $font-narrow-regular;
+            }
         }
     }
     .header-nav {
-        @extend .col-md-8;
+        @extend .col-md-7;
         padding-top: 10px;
     }
 }

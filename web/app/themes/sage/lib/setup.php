@@ -68,7 +68,7 @@ function widgets_init() {
     register_sidebar([
     'name'          => __('Home Page Widget Area 1', 'sage'),
     'id'            => 'sidebar-home-1',
-    'before_widget' => '<section class="home-widget-section"><div class="widget %1$s %2$s">',
+    'before_widget' => '<section class="container hero"><div class="row">',
     'after_widget'  => '</div></section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
@@ -77,7 +77,7 @@ function widgets_init() {
     register_sidebar([
     'name'          => __('Home Page Widget Area 2', 'sage'),
     'id'            => 'sidebar-home-2',
-    'before_widget' => '<section class="home-widget-section"><div class="widget %1$s %2$s">',
+    'before_widget' => '<section class="container intro"><div class="row">',
     'after_widget'  => '</div></section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
@@ -86,7 +86,7 @@ function widgets_init() {
     register_sidebar([
     'name'          => __('Home Page Widget Area 3', 'sage'),
     'id'            => 'sidebar-home-3',
-    'before_widget' => '<section class="home-widget-section"><div class="widget %1$s %2$s">',
+    'before_widget' => '<section class="container"><div class="row">',
     'after_widget'  => '</div></section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
@@ -95,7 +95,7 @@ function widgets_init() {
     register_sidebar([
     'name'          => __('Home Page Widget Area 4', 'sage'),
     'id'            => 'sidebar-home-4',
-    'before_widget' => '<section class="home-widget-section"><div class="widget %1$s %2$s">',
+    'before_widget' => '<section class="container"><div class="row">',
     'after_widget'  => '</div></section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'

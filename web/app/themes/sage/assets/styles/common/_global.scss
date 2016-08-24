@@ -9,6 +9,7 @@ body {
     font-weight: $font-weight-base;
     font-size: $font-size-base;
     padding-top: $height-site-header;
+    color: $color-text-main;
     &.logged-in,
     &.menu-bar {
         padding-top: calc(#{$height-site-header} + 32px);
@@ -33,6 +34,7 @@ h6,
 .h5,
 .h6 {
     font-family: $font-headings;
+    margin: 0 auto 20px;
 }
 
 a,
@@ -55,4 +57,13 @@ a:any-link {
 .button {
 	font-family: $font-sans-medium;
 	text-transform: uppercase;
+}
+
+p:last-child,
+p:empty {
+	margin-bottom: 0;
+}
+
+.pad-60 {
+	padding: 60px;
 }

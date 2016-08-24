@@ -1,28 +1,30 @@
 .archive.woocommerce ul.products li.product,
 .archive.woocommerce ul.products li.product.last,
 #product-widget .widget {
+    @extend .col-md-2;
     text-align: center;
-    clear: none;
-    display: inline-block;
-    float: left;
-    width: 31%;
-    margin-right: 3.5%;
-    margin-bottom: 40px;
-    &:nth-child(3n) {
-        margin-right: 0;
-    }
 }
 
 #product-widget .widget {
-    background: $white-tint;
-    padding: 15px;
+    .widget-wrap {
+        padding: 0 0 15px;
+        box-shadow: 0 0 1px $white;
+        text-align: center;
+    }
     h3 {
-    	font-family: $font-serif-bold;
-    	color: $color-text-main;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: $white;
+        font-family: $font-narrow-regular;
+        text-transform: uppercase;
+        font-size: 16px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
     }
     .widget-content a:first-child {
         @extend %block-default-full-width;
-        background: darken($color-red-3, 12%);
+        background: lighten($color-red-3, 12%);
         @extend %transition-default;
         &:hover img {
             transition: all .6s ease-in-out;

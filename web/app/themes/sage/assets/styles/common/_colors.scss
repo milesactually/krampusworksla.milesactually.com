@@ -9,7 +9,7 @@ $color-orange-2:		#e67e22; // carrot
 $color-orange-3:		#d35400; // pumpkin
 $color-red-1:			#e74c3c; // alizarin
 $color-red-2:			#c0392b; // pomegranate
-$color-red-3:			#c00000; // dark red
+$color-red-3:			#600000; // dark red
 $color-green-1:			#1abc9c; // turquoise
 $color-green-2:			#16a085; // green sea
 $color-green-3:			#2ecc71; // emerald
@@ -47,7 +47,7 @@ $color-cta: $brand-primary;
 $color-cta-visited: $color-cta;
 $color-cta-hover: lighten($color-cta, 10%);
 $color-cta-active: darken($color-cta, 10%);
-$color-text-main: #404040;
+$color-text-main: #303030;
 $color-button: $white;
 $color-button-bg: $color-cta;
 $color-button-border: #ccc #ccc #bbb;
