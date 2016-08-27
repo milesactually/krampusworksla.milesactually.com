@@ -1,15 +1,32 @@
 .archive.woocommerce ul.products li.product,
-.archive.woocommerce ul.products li.product.last,
-#product-widget .widget {
-    @extend .col-md-2;
+.archive.woocommerce ul.products li.product.last {
+    @extend .one-third;
     text-align: center;
+    &:nth-child(n) {
+    	margin-left: 0;
+
+    }
 }
+,
 
 #product-widget .widget {
-    .widget-wrap {
-        padding: 0 0 15px;
+	padding: 0;
+	margin-bottom: $width-content-gutter;
+	@extend .one-third;
+	&:nth-child(3n+1) {
+		margin-left: 0;
+	}
+	.home.page & {
+		@extend .one-sixth;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+    .widget-content {
+        padding: 0 0 $padding-md;
         box-shadow: 0 0 1px $white;
         text-align: center;
+        background: $black-tint;
     }
     h3 {
         margin-top: 10px;
@@ -24,6 +41,8 @@
     }
     .widget-content a:first-child {
         @extend %block-default-full-width;
+        padding: 0;
+        margin: 0;
         background: lighten($color-red-3, 12%);
         @extend %transition-default;
         &:hover img {
@@ -35,6 +54,8 @@
         clear: both;
         width: 100%;
         height: auto;
+        margin: 0 0 -5px;
+        //@include aspect-ratio(1,1);
     }
 }
 
@@ -47,7 +68,6 @@
     button.button.alt,
     input.button.alt,
     a.button {
-        @extend .btn;
-        @extend .btn-primary;
+       @extend button;
     }
 }

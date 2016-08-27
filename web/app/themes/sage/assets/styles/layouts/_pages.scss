@@ -1,0 +1,135 @@
+body.home.page {
+    background-color: #222;
+    background-image: url("../images/trio_overlay.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home-sections {
+    @extend %block-default-full-width;
+    max-width: $width-content;
+    text-align: center;
+    h1,
+    h2,
+    h3 {
+        margin: 0;
+    }
+    h3 {
+        text-align: left;
+        line-height: $line-height-base;
+        margin-bottom: $padding-lg;
+    }
+    section {
+        padding: $padding-xl;
+        margin-bottom: $padding-xl;
+        &:first-child {
+            background: $black-tint;
+            color: $white;
+            @extend %box-shadow-white;
+            h1 {
+                font-size: 5.8vw;
+                color: #ad0000;
+                @media screen and (min-width: 1200px) {
+                    font-size: 84px;
+                }
+            }
+            h2 {
+                font-size: 3.2vw;
+                @media screen and (min-width: 1200px) {
+                    font-size: 48px;
+                }
+            }
+        }
+        &:nth-child(2) {
+            background: $white-tint;
+            h1 {
+                font-size: 3.6vw;
+                @media screen and (min-width: 1200px) {
+                    font-size: 48px;
+                }
+            }
+            h2 {
+                font-size: 2.8vw;
+                @media screen and (min-width: 1200px) {
+                    font-size: 36px;
+                }
+            }
+        }
+        &:nth-child(3) {
+            background-color: #000;
+            background-image: url("../images/bighorn_01.png");
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: -10% bottom;
+            padding: 0;
+            color: $white;
+            @extend %box-shadow-white;
+            .home-img {
+                margin-left: 0;
+                background: #000;
+                img {
+                    max-width: 100%;
+                }
+            }
+            .home-text {
+                background: #000;
+                .wrap {
+                    padding: $padding-xl;
+                }
+            }
+            h1 {
+                font-size: 6.5vw;
+                @media screen and (min-width: 1200px) {
+                    font-size: 72px;
+                }
+            }
+            h2 {
+                font-size:2.4vw;
+                @media screen and (min-width: 1200px) {
+                    font-size: 36px;
+                }
+                a {
+                	font-family: $font-sans-black;
+                	text-transform: uppercase;
+                	color: $color-red-2;
+                	border: none;
+                	text-decoration: none;
+                }
+            }
+        }
+        &:last-child {
+            padding: 0;
+            margin-bottom: 0;
+            h1 {
+                color: $white;
+                font-family: $font-sans;
+                text-transform: uppercase;
+            }
+            button {
+            	clear: both;
+            	text-align: center;
+            	display: block;
+            	position: relative;
+            	margin-left: auto;
+            	margin-right: auto;
+            }
+        }
+    }
+}
+.home-img {
+    @extend .one-third;
+    &:first-child {
+        margin-left: 0;
+    }
+    img {
+        @extend %block-default-full-width;
+    }
+}
+
+.home-text {
+    @extend .two-thirds;
+    &:first-child {
+        margin-left: 0;
+    }
+}

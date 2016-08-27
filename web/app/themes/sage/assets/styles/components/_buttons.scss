@@ -1,0 +1,63 @@
+button {
+	padding: $padding-sm $padding-md;
+	line-height: 1;
+	background: $color-cta;
+	color: $white;
+	border: none;
+	box-shadow: none;
+	text-shadow: none;
+	outline: none;
+	font-size: $font-size-base;
+	font-family: $font-sans-bold;
+	text-transform: uppercase;
+	@extend %transition-default;
+	&:hover {
+		background: $color-cta-hover;
+		color: $white;
+	}
+	&:active,
+	&:focus,
+	&.active,
+	.active {
+		background: $color-cta-active;
+		color: $white;
+	}
+	&.inverse,
+	.inverse {
+		background: $white;
+		color: $color-text-main;
+		&:hover {
+			background: $color-gray-4;
+			color: $white;
+		}
+		&:active,
+		&:focus,
+		&.active,
+		.active {
+			background: $color-text-main;
+			color: $white;
+		}
+	}
+	&.xs,
+	.xs {
+		font-size: calc( #{$font-size-base} * .75);
+		padding: $padding-xs $padding-sm;
+	}
+	&.sm,
+	.sm {
+		font-size: calc( #{$font-size-base} * .875);
+		padding: $padding-sm $padding-md;
+	}
+	&.lg,
+	.lg {
+		font-size: calc( #{$font-size-base} * 1.375);
+		padding: $padding-md $padding-lg;
+		font-family: $font-sans-black;
+	}
+	&.xl,
+	.xl {
+		font-size: calc( #{$font-size-base} * 1.6375);
+		padding: $padding-lg $padding-xl;
+		font-family: $font-sans-black;
+	}
+}

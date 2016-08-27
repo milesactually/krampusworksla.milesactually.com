@@ -1,3 +1,4 @@
+@import "common/normalize";
 @import "typography/lato_font";
 @import "typography/libre_baskerville_font";
 @import "typography/oswald_font";
@@ -6,7 +7,6 @@
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 @import "common/global";
@@ -20,7 +20,7 @@
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
-@import "layouts/home";
+//@import "layouts/home2";
 @import "layouts/posts";
 @import "layouts/woocommerce";
 @import "layouts/tinymce";

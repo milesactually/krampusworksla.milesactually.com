@@ -1,8 +1,4 @@
-.nav-primary {
-	@media screen and (max-width: 767px) {
-		display: none;
-		position: absolute;
-	}
+nav.nav-primary {
 	ul {
 		width: auto;
 		float: left;
@@ -13,7 +9,7 @@
 
 		ul {
 			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-			float: left;
+			//float: left;
 			position: absolute;
 			//margin-top: 15px;
 			left: -999em;
@@ -98,6 +94,13 @@
 		background: inherit;
 	}
 }
+.nav-primary {
+	@media screen and (max-width: $mobile ) {
+		display: none;
+		position: absolute;
+
+	}
+}
 #nav-toggle {
 	display: block;
 	position: absolute;
@@ -107,7 +110,7 @@
 	right: 15px;
 	font-size: 40px;
 	z-index: 5;
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: $desktop) {
 		display: none;
 	}
 }

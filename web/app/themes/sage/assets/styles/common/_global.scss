@@ -5,20 +5,39 @@ body {
 }
 
 body {
+    margin: 0;
     font-family: $font-base;
     font-weight: $font-weight-base;
     font-size: $font-size-base;
     padding-top: $height-site-header;
     color: $color-text-main;
+    min-height: 100%;
     &.logged-in,
     &.menu-bar {
         padding-top: calc(#{$height-site-header} + 32px);
     }
 }
 
-.main {
-	padding-top: 60px;
-	padding-bottom: 60px;
+header,
+footer,
+.page-wrap,
+.content,
+section,
+.textwidget,
+.wrap {
+    position: relative;
+    margin: 0 auto;
+    clear: both;
+    @extend %clearfix;
+}
+
+.page-wrap {
+    max-width: $width-content;
+    padding: 0 15px;
+}
+
+.site-header + .page-wrap {
+    padding: 60px 15px;
 }
 
 h1,
@@ -33,15 +52,54 @@ h6,
 .h4,
 .h5,
 .h6 {
+    font-weight: $font-weight-headings;
+    line-height: $line-height-headings;
+}
+
+h1,
+.h1 {
+    font-family: $font-sans-black;
+}
+
+h2,
+.h2 {
+    font-family: "libre_baskervilleitalic", $font-serif;
+    line-height: $line-height-base;
+    &:before,
+    &:after {
+        display: block;
+        position: relative;
+        width: 250px;
+        height: 1px;
+        background: $color-gray-3;
+        content: "";
+        margin: 25px auto;
+        //line-height: 3;
+    }
+}
+
+h3,
+.h3 {
+    font-family: "LatoWeb", $font-sans;
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
     font-family: $font-headings;
     margin: 0 auto 20px;
 }
 
 a,
 a:any-link {
+	clear: both;
     color: $color-cta;
     text-decoration: none;
-    transition: all .5s ease-in-out;;
+    transition: all .5s ease-in-out;
+    ;
     &:hover {
         color: $color-cta-hover;
         text-decoration: none;
@@ -53,17 +111,11 @@ a:any-link {
     }
 }
 
-.btn,
-.button {
-	font-family: $font-sans-medium;
-	text-transform: uppercase;
-}
-
 p:last-child,
 p:empty {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .pad-60 {
-	padding: 60px;
+    padding: 60px;
 }

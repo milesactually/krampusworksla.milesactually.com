@@ -1,10 +1,128 @@
 // Grid system
-.main {
-  @include make-sm-column($main-sm-columns);
-  .sidebar-primary & {
-    @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
-  }
+/* main.main {
+	@extend %block-default-full-width-height;
+} */
+.sidebar-primary main.main {
+	clear: none;
+	display: inline-block;
+	position: relative;
+	float: left;
+	width: calc(#{$width-sidebar-primary} + #{$width-content-gutter});
+	&:before,
+	&:after {
+		display: none;
+	}
 }
+
 .sidebar {
-  @include make-sm-column($sidebar-sm-columns);
+	display: inline-block;
+	position: relative;
+	float: right;
+	width: $width-sidebar-primary;
+}
+
+/* Column Classes * * Width: 1170px * Gutter: 30px * Link: http: //www.billerickson.net/column-class-generator/
+--------------------------------------------- */ 
+.five-sixths,
+.four-sixths,
+.four-fifths,
+.one-fifth,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-fifths,
+.three-sixths,
+.two-fourths,
+.two-fifths,
+.two-sixths,
+.two-thirds {
+    float: left;
+    margin-left: 2.5641025641%;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+    width: 48.7179487179%;
+}
+
+.one-third,
+.two-sixths {
+    width: 31.6239316239%;
+}
+
+.four-sixths,
+.two-thirds {
+    width: 65.811965812%;
+}
+
+.one-fourth {
+    width: 23.0769230769%;
+}
+
+.three-fourths {
+    width: 74.358974359%;
+}
+
+.one-fifth {
+    width: 17.9487179487%;
+}
+
+.two-fifths {
+    width: 38.4615384615%;
+}
+
+.three-fifths {
+    width: 58.9743589744%;
+}
+
+.four-fifths {
+    width: 79.4871794872%;
+}
+
+.one-sixth {
+    width: 14.5299145299%;
+}
+
+.five-sixths {
+    width: 82.905982906%;
+}
+
+.first {
+    clear: both;
+    margin-left: 0;
+}
+
+@media screen and (max-width: $phone-lg) {
+    .five-sixths,
+    .four-sixths,
+    .four-fifths,
+    .one-fifth,
+    .one-fourth,
+    .one-half,
+    .one-sixth,
+    .one-third,
+    .three-fourths,
+    .three-fifths,
+    .three-sixths,
+    .two-fourths,
+    .two-fifths,
+    .two-sixths,
+    .two-thirds {
+        clear: both;
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: 0 auto 15px;
+        &:before,
+        &:after {
+            content: " ";
+            display: table;
+        }
+        &:after {
+            clear: both;
+        }
+    }
 }

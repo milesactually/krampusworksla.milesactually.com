@@ -1,26 +1,25 @@
-header.banner {
-    display: block;
+.site-header {
+    @extend %block-default-full-width;
     position: fixed;
-    width: 100%;
     height: $height-site-header;
-    margin: 0;
     top: 0;
     left: 0;
     right: 0;
-    padding: 14px 0;
     background: $color-site-header-bg;
     color: $white;
     z-index: 5;
+    @extend %box-shadow-white;
     .logged-in &,
     .menu-bar & {
         top: 32px;
     }
-    .container {
-        padding-left: 0;
-        padding-right: 0;
+    .page-wrap {
+        max-width: $width-content;
+        padding: $padding-md;
     }
     div.title-area {
-        @extend .col-md-5;
+        @extend .one-half;
+        margin-left: 0;
         text-align: left;
         img {
             float: left;
@@ -28,7 +27,7 @@ header.banner {
             width: auto;
             margin-right: 15px;
             @media screen and (max-width: 414px) {
-            	display: none;
+                display: none;
             }
         }
         a h1 {
@@ -55,20 +54,21 @@ header.banner {
                 }
             }
             @media screen and (max-width: 479px) {
-             span {
-                &:first-child {
-                    font-family: $font-narrow-medium;
-                    color: $white;
+                font-size: 24px;
+                span {
+                    &:first-child {
+                        font-family: $font-narrow-medium;
+                        color: $white;
+                    }
+                    &:nth-child(2) {
+                        font-family: $font-narrow-light;
+                        color: $color-gray-1;
+                    }
+                    &:last-child {
+                        font-family: $font-narrow-medium;
+                        color: $white;
+                    }
                 }
-                &:nth-child(2) {
-                    font-family: $font-narrow-light;
-                    color: $color-gray-1;
-                }
-                &:last-child {
-                    font-family: $font-narrow-medium;
-                    color: $white;
-                }
-            }           	
             }
         }
         p {
@@ -76,14 +76,43 @@ header.banner {
             font-family: $font-sans-light;
             font-size: 18px;
             text-transform: uppercase;
+            margin-top: 0;
             margin-bottom: 0;
             @media screen and (max-width: 479px) {
-            	font-family: $font-narrow-regular;
+                font-family: $font-narrow-regular;
+                font-size: 16px;
             }
         }
     }
-    .header-nav {
-        @extend .col-md-7;
-        padding-top: 10px;
+    nav {
+        @extend .one-half;
+        padding: 20px 0;
+        ul {
+            float: right;
+            text-align: right;
+            li.menu-item a {
+                color: $white;
+                &:hover {
+                    color: $color-gray-2;
+                }
+                &:active,
+                &:focus,
+                &.active,
+                .active {
+                    color: $color-gray-1;
+                }
+            }
+            ul {
+                background: $white;
+                text-align: left;
+                margin-left: 15px;
+                font-family: $font-sans-medium;
+                li.menu-item a {
+                    line-height: 2;
+                    @extend %link-default;
+                    border: none;
+                }
+            }
+        }
     }
 }
