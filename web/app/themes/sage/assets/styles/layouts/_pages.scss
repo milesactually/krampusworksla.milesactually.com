@@ -8,14 +8,15 @@ body.home.page {
 
 .home-sections {
     @extend %block-default-full-width;
-    max-width: $width-content;
+    //max-width: $width-content;
     text-align: center;
     h1,
     h2,
     h3 {
         margin: 0;
     }
-    h3 {
+    h3,
+    h4 {
         text-align: left;
         line-height: $line-height-base;
         margin-bottom: $padding-lg;
@@ -23,45 +24,73 @@ body.home.page {
     section {
         padding: $padding-xl;
         margin-bottom: $padding-xl;
-        &:first-child {
+        h1 {
+            font-size: 6.5vw;
+        }
+        h2 {
+            font-size: 3.5vw;
+            a {
+                //font-family: $font-sans-black;
+                //text-transform: uppercase;
+                font-size: 4.6vw;
+                color: $color-red-2;
+                border: none;
+                text-decoration: none;
+                font-style: normal;
+                @extend .krampus;
+            }
+        }
+        h3 {}
+        /* &:first-child {
             background: $color-red-3;
             color: $white;
             @extend %box-shadow-white;
-            h1 {
-                font-size: 5.8vw;
-                color: $color-gray-1;
-                @media screen and (min-width: 1200px) {
-                    font-size: 84px;
+            a button {
+                margin-top: $padding-md;
+                margin-bottom: 0;
+            }
+        } */
+       /*  &:nth-child(3) {
+            background: $white-tint;
+            @media screen and (min-width: $desktop) {
+                .home-text {
+                    float: left;
+                }
+                .home-img {
+                    float: right;
                 }
             }
-            h2 {
-                font-size: 3.2vw;
-                @media screen and (min-width: 1200px) {
-                    font-size: 48px;
+        } */
+        &:first-child {
+           background-color: #000;
+            background-image: url("../images/home_bg_old.jpg");
+            background-repeat: no-repeat;
+            background-size: 65% auto;
+            background-position: right bottom;
+            padding: 0;
+            color: $white;
+            @extend %box-shadow-white;
+            h1 {
+                color: $color-red-2;
+            }
+            .home-img {
+                margin-left: 0;
+                background: #000;
+                img {
+                    max-width: 100%;
                 }
+            }
+            .home-text {
+                ///background: #000;
+                    padding: $padding-xl 0;
             }
         }
         &:nth-child(2) {
-            background: $white-tint;
-            h1 {
-                font-size: 3.6vw;
-                @media screen and (min-width: 1200px) {
-                    font-size: 48px;
-                }
-            }
-            h2 {
-                font-size: 2.8vw;
-                @media screen and (min-width: 1200px) {
-                    font-size: 36px;
-                }
-            }
-        }
-        &:nth-child(3) {
             background-color: #000;
             background-image: url("../images/bighorn_01.png");
             background-repeat: no-repeat;
-            background-size: auto;
-            background-position: -10% bottom;
+            background-size: auto 100%;
+            background-position: left bottom;
             padding: 0;
             color: $white;
             @extend %box-shadow-white;
@@ -78,25 +107,6 @@ body.home.page {
                     padding: $padding-xl;
                 }
             }
-            h1 {
-                font-size: 6.5vw;
-                @media screen and (min-width: 1200px) {
-                    font-size: 72px;
-                }
-            }
-            h2 {
-                font-size:2.4vw;
-                @media screen and (min-width: 1200px) {
-                    font-size: 36px;
-                }
-                a {
-                	font-family: $font-sans-black;
-                	text-transform: uppercase;
-                	color: $color-red-2;
-                	border: none;
-                	text-decoration: none;
-                }
-            }
         }
         &:last-child {
             padding: 0;
@@ -105,18 +115,20 @@ body.home.page {
                 color: $white;
                 font-family: $font-sans;
                 text-transform: uppercase;
+                font-size: $font-size-h1;
             }
             button {
-            	clear: both;
-            	text-align: center;
-            	display: block;
-            	position: relative;
-            	margin-left: auto;
-            	margin-right: auto;
+                clear: both;
+                text-align: center;
+                display: block;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }
 }
+
 .home-img {
     @extend .one-third;
     &:first-child {
@@ -131,5 +143,72 @@ body.home.page {
     @extend .two-thirds;
     &:first-child {
         margin-left: 0;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .home-sections {
+        section {
+            padding: $padding-lg;
+            margin-bottom: 0;
+            .home-text {
+                margin-bottom: 0;
+            }
+            .home-img {
+                img {
+                    max-width: 30vw;
+                }
+            }
+            h1 {
+                font-size: 9vw;
+            }
+            h2 {
+                font-size: 5.375vw;
+                &:before,
+                &:after {
+                    margin: 15px auto;
+                }
+            }
+            h3 {
+                margin-bottom: $padding-md;
+            }
+            &:first-child {}
+            &:nth-child(2) {
+                .home-text {
+                    float: right;
+                }
+                .home-img {
+                    float: left;
+                }
+            }
+            &:nth-child(3) {
+                background-image: none;
+                margin-bottom: 20px;
+                .home-text .wrap {
+                    padding: $padding-lg;
+                }
+                .home-img {
+                    margin: 0;
+                    height: 0;
+                }
+            }
+            &:last-child {
+                h1 {
+                    font-size: 6vw;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .home-sections {
+        section {
+            h1 {
+                font-size: 72px;
+            }
+            h2 {
+                font-size: 42px;
+            }
+        }
     }
 }

@@ -18,6 +18,16 @@ body {
     }
 }
 
+@media screen and (max-width: 1023px) {
+    body {
+        padding-top: calc(#{$height-site-header} + 39px);
+        &.logged-in,
+        &.menu-bar {
+            padding-top: calc(#{$height-site-header} + 71px);
+        }
+    }
+}
+
 header,
 footer,
 .page-wrap,
@@ -38,6 +48,12 @@ section,
 
 .site-header + .page-wrap {
     padding: 60px 15px;
+    @media screen and (max-width: $mobile) {
+        padding: $padding-md;
+        .home & {
+            padding: 0;
+        }
+    }
 }
 
 h1,
@@ -94,11 +110,19 @@ h6,
 }
 
 a,
-a:any-link {
-	clear: both;
+a:link,
+a:any-link,
+a:-webkit-any-link,
+.woocommerce a,
+* a {
+    clear: both;
     color: $color-cta;
-    text-decoration: none;
+    text-decoration: none!important;
     transition: all .5s ease-in-out;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    outline: none;
     ;
     &:hover {
         color: $color-cta-hover;
@@ -118,4 +142,8 @@ p:empty {
 
 .pad-60 {
     padding: 60px;
+}
+.krampus {
+    font-family: 'Pirata One', cursive;
+    font-weight: normal;
 }

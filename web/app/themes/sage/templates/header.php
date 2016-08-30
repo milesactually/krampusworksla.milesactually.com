@@ -15,6 +15,6 @@
           endif;
           ?>
         </nav>
-      <span class="fa fa-bars" id="nav-toggle"></span>
+      <!-- <span class="fa fa-bars" id="nav-toggle"></span> -->
     </div>
 </header>

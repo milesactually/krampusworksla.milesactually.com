@@ -2,12 +2,14 @@
 /* main.main {
 	@extend %block-default-full-width-height;
 } */
-.sidebar-primary main.main {
+.sidebar-primary .main,
+.sidebar-primary main,
+.woocommerce.sidebar-primary main {
 	clear: none;
 	display: inline-block;
 	position: relative;
 	float: left;
-	width: calc(#{$width-sidebar-primary} + #{$width-content-gutter});
+	width: calc( 100% - (#{$width-sidebar-primary} + #{$width-content-gutter}));
 	&:before,
 	&:after {
 		display: none;
@@ -90,12 +92,12 @@
     width: 82.905982906%;
 }
 
-.first {
+/* .first {
     clear: both;
     margin-left: 0;
-}
+} */
 
-@media screen and (max-width: $phone-lg) {
+@media screen and (max-width: $mobile) {
     .five-sixths,
     .four-sixths,
     .four-fifths,

@@ -36,7 +36,7 @@
 	</section>
 	</div>
 	<div class="wrap">
-		<a href="/shop"><button class="btn btn-primary btn-lg center-block">Shop for Masks</button></a>
+		<a href="/shop"><button class="lg">Shop for Masks</button></a>
 	</div>	
 <?php ?>
 
