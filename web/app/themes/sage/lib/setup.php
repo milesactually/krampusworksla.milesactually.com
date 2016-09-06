@@ -16,7 +16,7 @@ function setup() {
   add_theme_support('soil-jquery-cdn');
   add_theme_support('soil-relative-urls');
   add_theme_support('woocommerce');
-  //add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+  add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/sage-translations
@@ -142,3 +142,4 @@ function assets() {
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+

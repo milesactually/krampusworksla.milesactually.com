@@ -56,6 +56,12 @@ section,
     }
 }
 
+.container,
+#container {
+    @extend %block-default-full-width;
+    overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -81,16 +87,24 @@ h2,
 .h2 {
     font-family: "libre_baskervilleitalic", $font-serif;
     line-height: $line-height-base;
-    &:before,
+    &:before {
+        display: block;
+        position: relative;
+        width: 250px;
+        height: 1px;
+        background: $color-red-2;
+        content: "";
+        margin: 0 auto 20px;
+    }
     &:after {
         display: block;
         position: relative;
         width: 250px;
         height: 1px;
-        background: $color-gray-3;
+        line-height: 1.8;
+        background: $color-red-2;
         content: "";
-        margin: 25px auto;
-        //line-height: 3;
+        margin: 20px auto $padding-lg;
     }
 }
 
@@ -114,6 +128,7 @@ a:link,
 a:any-link,
 a:-webkit-any-link,
 .woocommerce a,
+a:visited,
 * a {
     clear: both;
     color: $color-cta;
@@ -143,7 +158,29 @@ p:empty {
 .pad-60 {
     padding: 60px;
 }
+
 .krampus {
     font-family: 'Pirata One', cursive;
     font-weight: normal;
+    font-size: inherit;
+}
+
+a img {
+    @extend %block-default-full-width;
+    margin: 0;
+    height: auto;
+    @extend %transition-default;
+    &:hover {
+        -webkit-filter: brightness(50%);
+        -moz-filter: brightness(50%);
+        filter: url(#brightness);
+        /* required for FF */
+        filter: brightness(50%);
+    }
+    &:active {
+        -webkit-filter: contrast(150%);
+        -moz-filter: contrast(150%);
+        filter: url(#contrast);
+        filter: contrast(150%);
+    }
 }

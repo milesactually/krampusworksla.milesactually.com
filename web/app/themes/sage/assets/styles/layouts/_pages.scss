@@ -8,12 +8,13 @@ body.home.page {
 
 .home-sections {
     @extend %block-default-full-width;
-    //max-width: $width-content;
     text-align: center;
     h1,
-    h2,
     h3 {
         margin: 0;
+    }
+    h2 {
+        margin-bottom: $padding-xl;
     }
     h3,
     h4 {
@@ -30,9 +31,7 @@ body.home.page {
         h2 {
             font-size: 3.5vw;
             a {
-                //font-family: $font-sans-black;
-                //text-transform: uppercase;
-                font-size: 4.6vw;
+                @extend %link-default;
                 color: $color-red-2;
                 border: none;
                 text-decoration: none;
@@ -40,29 +39,8 @@ body.home.page {
                 @extend .krampus;
             }
         }
-        h3 {}
-        /* &:first-child {
-            background: $color-red-3;
-            color: $white;
-            @extend %box-shadow-white;
-            a button {
-                margin-top: $padding-md;
-                margin-bottom: 0;
-            }
-        } */
-       /*  &:nth-child(3) {
-            background: $white-tint;
-            @media screen and (min-width: $desktop) {
-                .home-text {
-                    float: left;
-                }
-                .home-img {
-                    float: right;
-                }
-            }
-        } */
         &:first-child {
-           background-color: #000;
+            background-color: #000;
             background-image: url("../images/home_bg_old.jpg");
             background-repeat: no-repeat;
             background-size: 65% auto;
@@ -81,8 +59,7 @@ body.home.page {
                 }
             }
             .home-text {
-                ///background: #000;
-                    padding: $padding-xl 0;
+                padding: $padding-xl 0;
             }
         }
         &:nth-child(2) {
@@ -110,12 +87,17 @@ body.home.page {
         }
         &:last-child {
             padding: 0;
-            margin-bottom: 0;
+            margin-bottom: $padding-lg;
             h1 {
-                color: $white;
-                font-family: $font-sans;
+                font-family: $font-sans-medium;
                 text-transform: uppercase;
                 font-size: $font-size-h1;
+            }
+            h3 {
+                text-align: center;
+                color: $white;
+                font-size: 3vw;
+                margin-bottom: $padding-md;
             }
             button {
                 clear: both;
@@ -162,7 +144,8 @@ body.home.page {
             h1 {
                 font-size: 9vw;
             }
-            h2 {
+            h2,
+            h2.krampus {
                 font-size: 5.375vw;
                 &:before,
                 &:after {
@@ -181,25 +164,10 @@ body.home.page {
                     float: left;
                 }
             }
-            &:nth-child(3) {
-                background-image: none;
-                margin-bottom: 20px;
-                .home-text .wrap {
-                    padding: $padding-lg;
-                }
-                .home-img {
-                    margin: 0;
-                    height: 0;
-                }
-            }
-            &:last-child {
-                h1 {
-                    font-size: 6vw;
-                }
-            }
         }
     }
 }
+
 @media screen and (min-width: 1200px) {
     .home-sections {
         section {

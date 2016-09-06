@@ -18,7 +18,10 @@
         padding: $padding-md;
     }
     div.title-area {
-        @extend .one-half;
+        display: inline-block;
+        float: left;
+        width: auto;
+        max-width: 380px;
         margin: 0;
         text-align: left;
         .wrap {
@@ -26,6 +29,10 @@
             display: inline-block;
             float: left;
             width: auto;
+            &:before,
+            &:after {
+                display: none;
+            }
         }
         img {
             display: inline-block;
@@ -95,6 +102,11 @@
                 font-size: 16px;
             }
         }
+    }
+}
+@media screen and (max-width: 840px) {
+    .site-header {
+        display: none;
     }
 }
 

@@ -1,0 +1,13 @@
+.woocommerce {
+    a .button,
+    button,
+    .button,
+    .button.button,
+    .button.alt,
+    button.button.alt,
+    input.button.alt,
+    a.button {
+        @extend button;
+        text-decoration: none;
+    }
+}

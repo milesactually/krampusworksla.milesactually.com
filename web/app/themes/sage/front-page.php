@@ -11,8 +11,8 @@
 	}	
 	if  (is_active_sidebar('sidebar-home-4') ) {
 		dynamic_sidebar('sidebar-home-4');
-	} ?>
-	<section id="product-widget">
+	} 
+	/*<section id="product-widget">
 		<h1 style="margin-bottom: 20px;">Current Inventory</h1>
 		<div class-"wrap">
 		<?php
@@ -34,6 +34,7 @@
 		<?php endwhile; wp_reset_query(); // Remember to reset ?>
 		</div>
 	</section>
+	*/ ?>
 	</div>
 	<div class="wrap">
 		<a href="/shop"><button class="lg">Shop for Masks</button></a>
