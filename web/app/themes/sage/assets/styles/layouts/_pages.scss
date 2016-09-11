@@ -1,14 +1,9 @@
-body.home.page {
-    background-color: #222;
-    background-image: url("../images/trio_overlay.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 .home-sections {
     @extend %block-default-full-width;
     text-align: center;
+    .home-text {
+        background: transparent;
+    }
     h1,
     h3 {
         margin: 0;
@@ -16,11 +11,15 @@ body.home.page {
     h2 {
         margin-bottom: $padding-xl;
     }
-    h3,
-    h4 {
+    h3 {
         text-align: left;
         line-height: $line-height-base;
         margin-bottom: $padding-lg;
+    }
+    h4 {
+        text-align: left;
+        line-height: $line-height-base;
+        margin-bottom: 0;
     }
     section {
         padding: $padding-xl;
@@ -37,6 +36,7 @@ body.home.page {
                 text-decoration: none;
                 font-style: normal;
                 @extend .krampus;
+                font-size: 4vw;
             }
         }
         &:first-child {
@@ -47,19 +47,30 @@ body.home.page {
             background-position: right bottom;
             padding: 0;
             color: $white;
+            margin-top: $padding-lg;
             @extend %box-shadow-white;
             h1 {
                 color: $color-red-2;
+                margin-bottom: $padding-lg;
+            }
+            h2 {
+                margin-bottom: $padding-lg;
+                + h3 {
+                    width: 75%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
             .home-img {
                 margin-left: 0;
-                background: #000;
+                background: transparent;
                 img {
                     max-width: 100%;
                 }
             }
             .home-text {
-                padding: $padding-xl 0;
+                background: transparent;
+                padding: $padding-xl;
             }
         }
         &:nth-child(2) {
@@ -73,21 +84,20 @@ body.home.page {
             @extend %box-shadow-white;
             .home-img {
                 margin-left: 0;
-                background: #000;
                 img {
                     max-width: 100%;
                 }
             }
             .home-text {
-                background: #000;
                 .wrap {
-                    padding: $padding-xl;
+                    padding: $padding-xl $padding-xl $padding-xl 20%;
                 }
             }
         }
         &:last-child {
-            padding: 0;
-            margin-bottom: $padding-lg;
+            padding: $padding-sm;
+            background: $black-tint;
+            margin-bottom: $padding-md;
             h1 {
                 font-family: $font-sans-medium;
                 text-transform: uppercase;
@@ -96,7 +106,8 @@ body.home.page {
             h3 {
                 text-align: center;
                 color: $white;
-                font-size: 3vw;
+                font-size: 30px;
+                margin-top: 0;
                 margin-bottom: $padding-md;
             }
             button {
@@ -113,6 +124,7 @@ body.home.page {
 
 .home-img {
     @extend .one-third;
+    background: transparent;
     &:first-child {
         margin-left: 0;
     }
@@ -123,20 +135,36 @@ body.home.page {
 
 .home-text {
     @extend .two-thirds;
+    background: transparent;
     &:first-child {
         margin-left: 0;
     }
 }
 
-@media screen and (max-width: $mobile) {
+@media screen and (max-width: 1024px) {
     .home-sections {
         section {
-            padding: $padding-lg;
+            padding: 0;
             margin-bottom: 0;
-            .home-text {
+            .home-text,
+            .home-img {
+                clear: both;
+                float: none;
+                display: block;
+                position: relative;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                background: rgba(0,0,0,.75);
                 margin-bottom: 0;
+                padding: $padding-lg;
             }
             .home-img {
+                margin: 0;
+                padding: 0;
+                height: 0;
+                max-height: 0;
+                overflow: hidden;
                 img {
                     max-width: 30vw;
                 }
@@ -152,16 +180,50 @@ body.home.page {
                     margin: 15px auto;
                 }
             }
-            h3 {
+            h3,
+            h2 + h3 {
+                width: 100%;
                 margin-bottom: $padding-md;
             }
-            &:first-child {}
+            &:first-child {
+                h3,
+                h2 + h3 {
+                    width: 100%;
+                }
+                .home-text {
+                    background: rgba(0, 0, 0, .75);
+                    padding: $padding-lg;
+                }
+                .textwidget .wrap {
+                    padding: 0;
+                }
+            }
             &:nth-child(2) {
+            	margin-bottom: $padding-md;
                 .home-text {
                     float: right;
+                    padding: $padding-lg;
                 }
                 .home-img {
                     float: left;
+                }
+                h2 {
+                    font-size: 5.375vw;
+                    &:before,
+                    &:after {
+                        margin: 15px auto;
+                    }
+                }
+                .krampus {
+                    font-size: 6.25vw;
+                }
+                .textwidget .wrap {
+                    padding: 0;
+                }
+            }
+            &:last-child {
+                h3 {
+                    font-size: 24px;
                 }
             }
         }
@@ -179,4 +241,42 @@ body.home.page {
             }
         }
     }
+}
+
+.wrap.maskinfo,
+.careinfo {
+    background: $black-tint;
+    color: $white;
+    padding: $padding-lg;
+    margin-top: $padding-lg;
+    a {
+        @extend %link-inverse;
+    }
+}
+
+.gallery,
+#masonry {
+	main {
+		@extend %block-default-full-width-height;
+	}
+	main .wrap {
+		padding: 0 10px;
+	}
+	.page-header {
+		padding: $padding-md $padding-lg;
+		background: $white;
+	}
+	.gallery-icon {
+		background: $brand-primary;
+	}
+	.wp-caption-text {
+		color: $color-text-main;
+		padding:0;
+	}
+
+}
+.about-krampusworksla {
+	.page-header {
+		margin-bottom: $padding-md;
+	}
 }

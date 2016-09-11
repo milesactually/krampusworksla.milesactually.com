@@ -28,18 +28,22 @@ $black:					#000;
 $white-tint:			rgba(255,255,255,.85);
 $black-tint:			rgba(0,0,0,.85);
 
+$color-text-main: 		#303030;
+$color-text: 			$color-text-main;
 $color-site-header-bg:	$black-tint;
-$color-site-footer-bg:	$black-tint;
-$color-sidebar-primary-bg: #fafafa;
+$color-site-footer-bg:	$color-site-header-bg;
+$color-sidebar-primary-bg: $white-tint;
+$color-sidebar-primary:	$color-text-main;
 
-$color-body-bg: #fff;
+$color-body-bg: #000;
 $color-screen-bg: #f1f1f1;
 $color-hr-bg: #ccc;
 $color-button-bg: #e6e6e6;
 $color-pre-bg: #eee;
 $color-ins-bg: #fff9c0;
+$color-sidebar-bg:		$color-gray-4;
 
-$color-text: #21759b;
+
 $color-input-text: #666;
 $color-input-text-focus: #111;
 $color-input-bg: $color-gray-1;
@@ -47,7 +51,6 @@ $color-cta: $brand-primary;
 $color-cta-visited: $color-cta;
 $color-cta-hover: lighten($color-cta, 10%);
 $color-cta-active: darken($color-cta, 10%);
-$color-text-main: #303030;
 $color-button: $white;
 $color-button-bg: $color-cta;
 $color-button-border: #ccc #ccc #bbb;

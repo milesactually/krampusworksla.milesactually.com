@@ -1,7 +1,15 @@
 footer.content-info {
 	@extend %block-default-full-width;
+	margin: $padding-lg 0 0;
 	background: $color-site-footer-bg;
 	color: $white;
 	height: $height-site-footer;
-	padding-top: 20px;
+	text-align: center;
+	font-family: $font-sans-medium;
+	section {
+		clear: both;
+		@extend %block-default-full-width;
+		min-height: $height-site-footer;
+		line-height: $height-site-footer;
+	}
 }

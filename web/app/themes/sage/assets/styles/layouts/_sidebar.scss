@@ -1,0 +1,12 @@
+aside.sidebar {
+	h3 {
+		border-bottom: 1px solid $brand-primary;
+		padding-bottom: $padding-sm;
+		margin-bottom: $padding-sm;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+}

@@ -17,7 +17,7 @@ nav.nav-primary {
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
             background: none;
             position: absolute;
-            top: 15px;
+            top: 25px;
             left: -999em;
             z-index: 99999;
             margin-left: $padding-md;
@@ -65,7 +65,7 @@ nav.nav-primary {
         display: inline-block;
         width: auto;
         text-decoration: none;
-        padding: 0 15px;
+        padding: 0 12px;
         @include transition(all, 0.4s, ease-in-out);
         &:hover {
             color: $color-gray-2;
@@ -111,9 +111,10 @@ nav.nav-primary {
 }
 
 p.slicknav-logo-text {
+    clear: none;
     display: inline-block;
     float: left;
-    margin: 0;
+    margin: 0 0 0 $padding-xl;
     padding: 0;
     clear: none;
     line-height: 2.2;
@@ -141,6 +142,39 @@ p.slicknav-logo-text {
 a.slicknav_btn {
     position: absolute;
     margin: 0;
-    top: $padding-sm;
-    right: $padding-sm;
+    top: 12px;
+    left: $padding-sm;
+}
+
+.slicknav_menu .slicknav_menutxt {
+    display: none;
+}
+
+li.search {
+    padding-left: $padding-sm;
+    padding-right: $padding-sm;
+}
+
+.slicknav_nav .slicknav_arrow {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    margin: 0 $padding-sm 0 0;
+}
+
+.slicknav_nav .menu-item a:hover,
+.slicknav_nav a span:hover {
+    background: #000;
+}
+.post-navigation {
+	box-sizing: border-box;
+	@extend %block-default-full-width;
+	padding: $padding-md $padding-lg;
+	text-align: center;
+	background: $color-gray-1;
+	a {
+		padding: 0 $padding-xs;
+		&:nth-child(2) {
+			border-left: 1px solid $black;
+		}
+	}
 }

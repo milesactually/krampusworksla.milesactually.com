@@ -46,6 +46,9 @@
             	.home-img {
             		@extend .one-fourth;
             	}
+            	h2 {
+            		margin-top: $padding-lg;
+            	}
             }
             &:nth-child(3) {
             	padding: 0;
@@ -123,6 +126,7 @@
                 h1 {
                     font-size: 96px;
                     padding: 20px 0;
+                    margin-bottom: $padding-lg;
                 }
                 h2 {
                     font-size: 48px;
@@ -144,4 +148,7 @@
             @extend %block-default-full-width;
         }
     }
+}
+.home-sections section:first-child h1 span.krampus {
+	padding-bottom: $padding-lg;
 }

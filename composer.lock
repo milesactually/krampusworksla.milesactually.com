@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2487749e41b23be5beba7deeed354202",
-    "content-hash": "eb501239b3d49c1ed0d9d88e77814e75",
+    "hash": "561c5c22aacfea5d532c5549d0f748c8",
+    "content-hash": "feaa9f4c8e9243f3afe70e19952ff10f",
     "packages": [
         {
             "name": "composer/installers",
@@ -444,6 +444,26 @@
             "homepage": "https://wordpress.org/plugins/extended-featured-content-widget/"
         },
         {
+            "name": "wpackagist-plugin/force-regenerate-thumbnails",
+            "version": "2.0.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/force-regenerate-thumbnails/",
+                "reference": "tags/2.0.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/force-regenerate-thumbnails.2.0.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/force-regenerate-thumbnails/"
+        },
+        {
             "name": "wpackagist-plugin/slicknav-mobile-menu",
             "version": "1.8.0",
             "source": {
@@ -482,6 +502,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/woocommerce/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-featherlight",
+            "version": "0.3.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-featherlight/",
+                "reference": "tags/0.3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-featherlight.0.3.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-featherlight/"
         }
     ],
     "packages-dev": [

@@ -17,6 +17,7 @@ function setup() {
   add_theme_support('soil-relative-urls');
   add_theme_support('woocommerce');
   add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+  add_theme_support( 'post-thumbnails' );
 
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/sage-translations
@@ -123,6 +124,7 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
+    is_page('gallery'),
     is_page_template('template-custom.php'),
   ]);
 
@@ -134,12 +136,19 @@ function display_sidebar() {
  */
 function assets() {
   wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
+  wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
+  if ( is_page('gallery') ) {
+    wp_enqueue_script('masonry');
+    wp_enqueue_style('sage/css’, get_template_directory_uri()'.'/css/');
+    wp_enqueue_script('sage/js', Assets\asset_path('scripts/masonry-init.js'), ['jquery'], null, true);
+  }
 
-  wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+  //wp_enqueue_script('flickety-script', 'https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js');
+ // wp_enqueue_style('flickity-style', 'https://unpkg.com/flickity@2.0/dist/flickity.min.css');
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 

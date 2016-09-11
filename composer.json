@@ -44,7 +44,10 @@
     "wpackagist-plugin/extended-featured-content-widget":">=0.3",
     "wpackagist-plugin/contact-form-7":">=4.5",
     "wpackagist-plugin/database-sync":">=0.5.1",
-    "wpackagist-plugin/slicknav-mobile-menu":">=1.8.0"
+    "wpackagist-plugin/slicknav-mobile-menu":">=1.8.0",
+    "wpackagist-plugin/wp-featherlight":">=0.3.0",
+    "wpackagist-plugin/force-regenerate-thumbnails":">=2.0.6"
+
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

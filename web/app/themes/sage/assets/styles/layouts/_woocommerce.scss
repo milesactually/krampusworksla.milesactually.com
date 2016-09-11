@@ -166,3 +166,16 @@ ul.product_list_widget {
         }
     }
 }
+
+.single-product {
+    .product {
+        .images {
+            width: 25%;
+            float: left;
+        }
+        .summary.entry-summary {
+            width: 75%;
+            float: right;
+        }
+    }
+}

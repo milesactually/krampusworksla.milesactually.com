@@ -48,6 +48,15 @@ a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
     text-decoration: none;
+    color: #600000;
+    transition: all .5s ease-in-out;
+    &:hover {
+    	color: lighten(#600000, 12%);
+    }
+    &:active,
+    &:focus {
+    	color: farkenn(#600000, 12%);
+    }
 }
 
 a:active,

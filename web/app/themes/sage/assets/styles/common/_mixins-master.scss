@@ -125,5 +125,18 @@
         color: $color-cta-active
     }
 }
+%link-inverse {
+    color: $color-gray-2;
+    transition: all .4s ease-in-out;
+    &:hover {
+        color: $color-gray-1;
+    }
+    &:active,
+    &:focus,
+    &.active,
+    .active {
+        color: $color-gray-3;
+    }
+}
 
 
