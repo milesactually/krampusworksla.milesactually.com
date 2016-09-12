@@ -4,6 +4,10 @@
 	font-size: $sizeValue * 1rem;
 }
 
+
+
+
+
 // Center block
 @mixin center-block {
 	display: block;
@@ -45,6 +49,28 @@
     -ms-transition: $transition-property $transition-time $method;
     -o-transition: $transition-property $transition-time $method;
     transition: $transition-property $transition-time $method;
+}
+
+@mixin button($color ) {
+    @include button-static;
+    background-color: $color;
+    border-color: mix(black, $color, 25%);
+    &:hover {
+        background-color: lighten($color, 15%);
+        border-color: mix(black, $color, 20%);
+    }
+}
+
+@mixin button-static {
+    border: 1px solid;
+    border-radius: 0;
+    padding: $padding-xs $padding-sm;
+    color: $white;
+    text-transform: uppercase;
+    @include transition(all, 0.4s, ease-in-out);
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 %block-default-full-width {

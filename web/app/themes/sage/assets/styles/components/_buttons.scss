@@ -1,5 +1,5 @@
-button,
-.button {
+/*button,
+/.button {
 	clear: both;
 	display: block;
 	position: relative;
@@ -84,4 +84,11 @@ button,
             padding: $padding-sm $padding-md;
         }
     }
+}
+/* */
+
+.button,
+button {
+    @include button($color-cta);
+    @include font-size(.85);
 }

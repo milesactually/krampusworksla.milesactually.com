@@ -46,6 +46,7 @@
     "wpackagist-plugin/database-sync":">=0.5.1",
     "wpackagist-plugin/slicknav-mobile-menu":">=1.8.0",
     "wpackagist-plugin/wp-featherlight":">=0.3.0",
+    "wpackagist-plugin/all-in-one-wp-migration":">=5.50",
     "wpackagist-plugin/force-regenerate-thumbnails":">=2.0.6"
 
   },
