@@ -126,6 +126,7 @@ function display_sidebar() {
     is_front_page(),
     is_page('gallery'),
     is_page_template('template-custom.php'),
+    is_post_type_archive('product')
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -143,8 +144,8 @@ function assets() {
   }
   if ( is_page('gallery') ) {
     wp_enqueue_script('masonry');
-    wp_enqueue_style('sage/css’, get_template_directory_uri()'.'/css/');
-    wp_enqueue_script('sage/js', Assets\asset_path('scripts/masonry-init.js'), ['jquery'], null, true);
+   // wp_enqueue_style('sage/css’, get_template_directory_uri()'.'/css/');
+    //wp_enqueue_script('sage/js', Assets\asset_path('scripts/masonry-init.js'), ['jquery'], null, true);
   }
 
   //wp_enqueue_script('flickety-script', 'https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js');

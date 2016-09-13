@@ -14,7 +14,7 @@
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-			<h1 class="page-title">Current Inventory</h1>
+			<h1 class="page-title">Current Masks</h1>
 
 		<?php endif; ?>
 

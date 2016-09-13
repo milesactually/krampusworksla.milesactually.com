@@ -254,18 +254,24 @@
     }
 }
 
-.gallery,
+.page.gallery,
 #masonry {
 	main {
 		@extend %block-default-full-width-height;
-	}
-	main .wrap {
-		padding: 0 10px;
+		background: $white;
+		//padding: 0 20px;
 	}
 	.page-header {
+		padding: $padding-lg;
+	}
+	main > .wrap {
+		padding: 0 15px;
+		//padding: 0 10px;
+	}
+	/* .page-header {
 		padding: $padding-md $padding-lg;
 		background: $white;
-	}
+	} */
 	.gallery-icon {
 		background: $brand-primary;
 	}
@@ -277,6 +283,6 @@
 }
 .about-krampusworksla {
 	.page-header {
-		margin-bottom: $padding-md;
+		margin-bottom: 0;
 	}
 }

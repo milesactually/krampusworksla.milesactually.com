@@ -3,7 +3,9 @@
 remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_catalog_ordering', 30 );
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 add_action( 'woocommerce_after_main_content', 'sage_soliloquy_products_slider' );
-add_action( 'woocommerce_after_main_content', 'woocommerce_add_post_navigation' );
+if (!is_post_type_archive('product') ) {
+	add_action( 'woocommerce_after_main_content', 'woocommerce_add_post_navigation' );
+}
 //add_action( 'woocommerce_after_single_product_summary', 'sage_related_products_title' );
 remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 );
 

@@ -4,10 +4,7 @@ ul.product_list_widget {
     margin: 0;
     padding: 0;
     color: $color-text-main;
-    .home & {
-        //background: $black-tint;
-        //color: $white;
-    }
+    .home & {}
     li {
         @extend .one-third;
         box-sizing: border-box;
@@ -34,7 +31,6 @@ ul.product_list_widget {
                     -webkit-filter: brightness(50%);
                     -moz-filter: brightness(50%);
                     filter: url(#brightness);
-                    /* required for FF */
                     filter: brightness(50%);
                 }
                 &:active {
@@ -65,47 +61,49 @@ ul.product_list_widget {
     padding: 0;
     max-width: 100%;
     overflow: hidden;
+    text-align: center;
     li {
-        @extend %block-default-full-width;
-        max-width: 100%;
-        background: $color-gray-4;
+    	box-sizing: border-box;
+        @extend .one-half;
+        background: $brand-primary;
         color: $white;
-        padding: $padding-lg;
         margin-bottom: $padding-lg;
-        a img {
-            @extend .one-fourth;
+        @extend %box-shadow-white;
+        padding: $padding-lg;
+        &:nth-child(odd) {
             margin-left: 0;
-            padding-right: $padding-lg;
         }
-        a h3 {
-            @extend .krampus;
-            @extend %link-default;
-            font-size: 2.5vw;
-            margin-top: $padding-md;
-            margin-bottom: $padding-md;
+        a {
+            @extend %block-default-full-width;
+            color: $color-text-main;
+            img {
+            	//background: $brand-primary;
+            }
+            h3 {
+            	margin: 0;
+            	line-height: 2;
+            	background: $white;
+            }
+            &.button {
+            	color: $white;
+            	background: $black;
+            	&:hover {
+            		background: $color-cta-hover;
+            		border-color: $color-cta-hover;
+            	}
+            }
         }
     }
-  /*   .button,
-    .woocommerce .button,
-    .woocommerce .button.alt,
-    .woocommerce a .button,
-    .woocommerce a.button,
-    .woocommerce button,
-    .woocommerce button.button.alt,
-    .woocommerce input.button.alt,
-    button {
-        float: left;
-        width: auto;
-        min-width: none;
-        max-width: 200px;
-        text-align: center;
-        //margin-left: calc(23.0769230769% + #{$padding-lg});
-    } */
-    a span.price {
+    span.price {
+        display: block;
+        position: relative;
+        clear: both;
         font-family: $font-sans-bold;
-        color: $color-text-main;
-        font-size: 1.6vw;
+        margin: 0 auto;
+        line-height: 2;
+        //color: $color-text-main;
+        //font-size: 1.6vw;
         width: 100%;
-
+        background: $white;
     }
 }

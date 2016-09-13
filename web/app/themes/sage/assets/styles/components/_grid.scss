@@ -1,45 +1,42 @@
-// Grid system
-
-/* main.main {
-	@extend %block-default-full-width-height;
-} */
-
 .sidebar-primary .main,
 .sidebar-primary main,
 .woocommerce.sidebar-primary main {
     display: inline-block;
     margin: 0;
     width: calc( #{$width-content } - (#{$width-sidebar-primary} + (#{$width-content-gutter} * 2));
+    background: $white;
+    padding: $padding-lg;
 }
 
-main,
-.main,
-#main {
-	box-sizing: border-box;
+main, #main {
+    box-sizing: border-box;
     float: left;
-    background: $white;
     padding: 0;
     .home & {
-    	background: transparent;
+        background: transparent;
+        padding: 0;
     }
     .wrap {
-    	box-sizing: border-box;
-    	@extend %block-default-full-width;
-    	max-width: 100%;
-    	padding: 0 $padding-lg $padding-lg;
+        box-sizing: border-box;
+        @extend %block-default-full-width;
+        max-width: 100%;
+        padding: 0;
+    }
+    p:first-of-type {
+        margin-top: 0;
     }
 }
-.page-header {
-	@extend %block-default-full-width;
-	padding: $padding-md $padding-lg 0;
-	h1 {
-		margin-bottom: 0;
-	}
 
+.page-header {
+    @extend %block-default-full-width;
+    padding: 0 0 $padding-lg;
+    h1 {
+        margin-bottom: 0;
+    }
 }
 
 aside.sidebar {
-	box-sizing: border-box;
+    box-sizing: border-box;
     clear: none;
     display: inline-block;
     float: right;
@@ -48,50 +45,34 @@ aside.sidebar {
     color: $color-sidebar-primary;
     padding: $padding-md;
     h3 {
-    	font-family: $font-sans-black;
-    	text-transform: uppercase;
+        font-family: $font-sans-black;
+        text-transform: uppercase;
     }
 }
+
 #masonry {
-	@extend %block-default-full-width-height;
-	padding-bottom: $padding-md;
+    @extend %block-default-full-width-height;
+    padding-bottom: 0;
 }
+
 
 /* Column Classes * * Width: 1170px * Gutter: 30px * Link: http: //www.billerickson.net/column-class-generator/
 --------------------------------------------- */
 
-.five-sixths,
-.four-sixths,
-.four-fifths,
-.one-fifth,
-.one-fourth,
-.one-half,
-.one-sixth,
-.one-third,
-.three-fourths,
-.three-fifths,
-.three-sixths,
-.two-fourths,
-.two-fifths,
-.two-sixths,
-.two-thirds {
+.five-sixths, .four-sixths, .four-fifths, .one-fifth, .one-fourth, .one-half, .one-sixth, .one-third, .three-fourths, .three-fifths, .three-sixths, .two-fourths, .two-fifths, .two-sixths, .two-thirds {
     float: left;
     margin-left: 2.5641025641%;
 }
 
-.one-half,
-.three-sixths,
-.two-fourths {
+.one-half, .three-sixths, .two-fourths {
     width: 48.7179487179%;
 }
 
-.one-third,
-.two-sixths {
+.one-third, .two-sixths {
     width: 31.6239316239%;
 }
 
-.four-sixths,
-.two-thirds {
+.four-sixths, .two-thirds {
     width: 65.811965812%;
 }
 
@@ -134,28 +115,13 @@ aside.sidebar {
 } */
 
 @media screen and (max-width: $mobile) {
-    .five-sixths,
-    .four-sixths,
-    .four-fifths,
-    .one-fifth,
-    .one-fourth,
-    .one-half,
-    .one-sixth,
-    .one-third,
-    .three-fourths,
-    .three-fifths,
-    .three-sixths,
-    .two-fourths,
-    .two-fifths,
-    .two-sixths,
-    .two-thirds {
+    .five-sixths, .four-sixths, .four-fifths, .one-fifth, .one-fourth, .one-half, .one-sixth, .one-third, .three-fourths, .three-fifths, .three-sixths, .two-fourths, .two-fifths, .two-sixths, .two-thirds {
         clear: both;
         display: block;
         position: relative;
         width: 100%;
         margin: 0 auto 15px;
-        &:before,
-        &:after {
+        &:before, &:after {
             content: " ";
             display: table;
         }
